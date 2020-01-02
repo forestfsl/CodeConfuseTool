@@ -15,8 +15,6 @@
 		07393E5D23B5D4FC00D5315F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07393E5B23B5D4FC00D5315F /* LaunchScreen.storyboard */; };
 		07393E6023B5D4FC00D5315F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07393E5F23B5D4FC00D5315F /* main.m */; };
 		07393E6823B5D51500D5315F /* SLPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 07393E6723B5D51500D5315F /* SLPerson.m */; };
-		0789C2A323B7433100354D9C /* MJEncryptString.m in Sources */ = {isa = PBXBuildFile; fileRef = 0789C2A023B7433100354D9C /* MJEncryptString.m */; };
-		0789C2A423B7433100354D9C /* MJEncryptStringData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0789C2A123B7433100354D9C /* MJEncryptStringData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,12 +32,6 @@
 		07393E5F23B5D4FC00D5315F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		07393E6623B5D51500D5315F /* SLPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLPerson.h; sourceTree = "<group>"; };
 		07393E6723B5D51500D5315F /* SLPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLPerson.m; sourceTree = "<group>"; };
-		0789C29F23B7433100354D9C /* MJEncryptString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MJEncryptString.h; path = MJEncryptString/MJEncryptString.h; sourceTree = "<group>"; };
-		0789C2A023B7433100354D9C /* MJEncryptString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MJEncryptString.m; path = MJEncryptString/MJEncryptString.m; sourceTree = "<group>"; };
-		0789C2A123B7433100354D9C /* MJEncryptStringData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MJEncryptStringData.m; path = MJEncryptString/MJEncryptStringData.m; sourceTree = "<group>"; };
-		0789C2A223B7433100354D9C /* MJEncryptStringData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MJEncryptStringData.h; path = MJEncryptString/MJEncryptStringData.h; sourceTree = "<group>"; };
-		0789C2A523B7439B00354D9C /* MJCodeObfuscation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJCodeObfuscation.h; sourceTree = SOURCE_ROOT; };
-		0789C2A623B743E600354D9C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,11 +64,6 @@
 		07393E4C23B5D4F900D5315F /* TestCodeConfuse */ = {
 			isa = PBXGroup;
 			children = (
-				0789C2A523B7439B00354D9C /* MJCodeObfuscation.h */,
-				0789C29F23B7433100354D9C /* MJEncryptString.h */,
-				0789C2A023B7433100354D9C /* MJEncryptString.m */,
-				0789C2A223B7433100354D9C /* MJEncryptStringData.h */,
-				0789C2A123B7433100354D9C /* MJEncryptStringData.m */,
 				07393E4D23B5D4F900D5315F /* AppDelegate.h */,
 				07393E4E23B5D4F900D5315F /* AppDelegate.m */,
 				07393E5023B5D4F900D5315F /* SceneDelegate.h */,
@@ -90,7 +77,6 @@
 				07393E5F23B5D4FC00D5315F /* main.m */,
 				07393E6623B5D51500D5315F /* SLPerson.h */,
 				07393E6723B5D51500D5315F /* SLPerson.m */,
-				0789C2A623B743E600354D9C /* PrefixHeader.pch */,
 			);
 			path = TestCodeConfuse;
 			sourceTree = "<group>";
@@ -166,8 +152,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				07393E5523B5D4F900D5315F /* ViewController.m in Sources */,
-				0789C2A423B7433100354D9C /* MJEncryptStringData.m in Sources */,
-				0789C2A323B7433100354D9C /* MJEncryptString.m in Sources */,
 				07393E4F23B5D4F900D5315F /* AppDelegate.m in Sources */,
 				07393E6023B5D4FC00D5315F /* main.m in Sources */,
 				07393E6823B5D51500D5315F /* SLPerson.m in Sources */,
@@ -312,7 +296,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				GCC_PREFIX_HEADER = /Users/forest/CoderTools/TestCodeConfuse/TestCodeConfuse/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = TestCodeConfuse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -329,7 +313,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				GCC_PREFIX_HEADER = /Users/forest/CoderTools/TestCodeConfuse/TestCodeConfuse/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = TestCodeConfuse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

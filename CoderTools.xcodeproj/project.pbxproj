@@ -20,6 +20,8 @@
 		0789C2D223B8574700354D9C /* SLTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0789C2CF23B8574700354D9C /* SLTextView.m */; };
 		0789C2D723B8578200354D9C /* SLObfuscationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0789C2D523B8578200354D9C /* SLObfuscationTool.m */; };
 		0789C2D823B8578200354D9C /* SLClangTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0789C2D623B8578200354D9C /* SLClangTool.m */; };
+		07E342BF23BE06D000F8F58A /* script in Resources */ = {isa = PBXBuildFile; fileRef = 07E342BE23BE06D000F8F58A /* script */; };
+		07E342C223BE0B1D00F8F58A /* Test.h in Resources */ = {isa = PBXBuildFile; fileRef = 07E342C123BE0AB400F8F58A /* Test.h */; };
 		2D7B47972126C46D006D5755 /* libclang.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7B47962126C46D006D5755 /* libclang.dylib */; };
 		2DCF3D6A21257FAF00E32B33 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCF3D6921257FAF00E32B33 /* AppDelegate.m */; };
 		2DCF3D6F21257FB000E32B33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DCF3D6E21257FB000E32B33 /* Assets.xcassets */; };
@@ -50,6 +52,8 @@
 		0789C2D423B8578200354D9C /* SLObfuscationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLObfuscationTool.h; sourceTree = "<group>"; };
 		0789C2D523B8578200354D9C /* SLObfuscationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLObfuscationTool.m; sourceTree = "<group>"; };
 		0789C2D623B8578200354D9C /* SLClangTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLClangTool.m; sourceTree = "<group>"; };
+		07E342BE23BE06D000F8F58A /* script */ = {isa = PBXFileReference; lastKnownFileType = folder; path = script; sourceTree = "<group>"; };
+		07E342C123BE0AB400F8F58A /* Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
 		2D7B478B2126C436006D5755 /* Index.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Index.h; sourceTree = "<group>"; };
 		2D7B478C2126C436006D5755 /* BuildSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuildSystem.h; sourceTree = "<group>"; };
 		2D7B478D2126C436006D5755 /* Documentation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Documentation.h; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 		2D3716E42128169600A5F250 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				07E342C123BE0AB400F8F58A /* Test.h */,
 				0789C2BD23B8563900354D9C /* SLEncryptStringDataH.tpl */,
 				0789C2BA23B8563900354D9C /* SLEncryptStringDataHUnit.tpl */,
 				0789C2B823B8563900354D9C /* SLEncryptStringDataM.tpl */,
@@ -200,6 +205,7 @@
 		2DCF3D6721257FAF00E32B33 /* CoderTools */ = {
 			isa = PBXGroup;
 			children = (
+				07E342BE23BE06D000F8F58A /* script */,
 				2D3716E42128169600A5F250 /* Template */,
 				2D8FF87B2126FCD600950CF4 /* Classes */,
 				2D8FF87C2126FCF000950CF4 /* Other */,
@@ -280,9 +286,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07E342C223BE0B1D00F8F58A /* Test.h in Resources */,
 				0789C2BE23B8563900354D9C /* SLEncryptStringDataM.tpl in Resources */,
 				0789C2C223B8563900354D9C /* SLEncryptStringH.tpl in Resources */,
 				2DCF3D6F21257FB000E32B33 /* Assets.xcassets in Resources */,
+				07E342BF23BE06D000F8F58A /* script in Resources */,
 				0789C2C323B8563900354D9C /* SLEncryptStringDataH.tpl in Resources */,
 				0789C2BF23B8563900354D9C /* SLEncryptStringM.tpl in Resources */,
 				0789C2C023B8563900354D9C /* SLEncryptStringDataHUnit.tpl in Resources */,

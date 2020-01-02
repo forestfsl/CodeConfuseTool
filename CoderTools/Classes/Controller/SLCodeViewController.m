@@ -87,11 +87,38 @@
     
     // 处理结束
     void (^completion)(NSString *) = ^(NSString *fileContent) {
-        // 保存
+        //拿到内容先存储在本地Mac App路径，该路径还有#define AXXXXX BYYYYY 的形式，
+         NSString *path = @"/Users/songlin/CodeConfuseTool/CoderTools/script/input.h";
+        
+
+        NSError *error;
+        [fileContent writeToFile:path atomically:YES
+                                        encoding:NSUTF8StringEncoding error:&error];
+           if (error) {
+               NSLog(@"存储失败:%@",error.localizedDescription);
+               
+
+           }else{
+               //然后执行python脚本
+                [self invokingPythonScriptAtPath:@"/Users/songlin/CodeConfuseTool/CoderTools/script/nature_language_confuse.py"];
+               NSLog(@"成功");
+           }
+      
+       
+        
+        
+        //拷贝文件到相应路径
         self.destFilepath = [self.filepath stringByAppendingPathComponent:@"SLCodeObfuscation.h"];
         self.destFilepath = [NSFileManager sl_checkPathExists:self.destFilepath];
-        [fileContent writeToFile:self.destFilepath atomically:YES
-                        encoding:NSUTF8StringEncoding error:nil];
+        
+         NSFileManager *mgr = [NSFileManager defaultManager];
+        
+        NSString *outpath = @"/Users/songlin/CodeConfuseTool/CoderTools/script/output.h";
+        [mgr copyItemAtPath:outpath toPath:self.destFilepath error:&error];
+        //原来的是保存
+//        [fileContent writeToFile:self.destFilepath atomically:YES
+//                        encoding:NSUTF8StringEncoding error:nil];
+        
         
         dispatch_async(dispatch_get_main_queue(), ^{
             self.destFilepathLabel.stringValue = [@"混淆后的文件路径：\n" stringByAppendingString:self.destFilepath];
@@ -112,4 +139,22 @@
     });
 }
 
+
+
+
+-(id) invokingPythonScriptAtPath :(NSString*) pyScriptPath
+{
+    NSTask *shellTask = [[NSTask alloc]init];
+    [shellTask setLaunchPath:@"/bin/bash"];
+    NSString *pyStr = [NSString stringWithFormat:@"/Library/Frameworks/Python.framework/Versions/3.7/bin/python3 %@",pyScriptPath];
+    [shellTask setArguments:[NSArray arrayWithObjects:@"-c",pyStr, nil]];
+    NSPipe *pipe = [[NSPipe alloc]init];
+    [shellTask setStandardOutput:pipe];
+    [shellTask launch];
+    NSFileHandle *file = [pipe fileHandleForReading];
+    NSData *data =[file readDataToEndOfFile];
+    NSString *strReturnFromPython = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+//    NSLog(@"The return content from python script is: %@",strReturnFromPython);
+    return strReturnFromPython;
+}
 @end
