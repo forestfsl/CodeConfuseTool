@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 #import "SLPerson.h"
+#import "SLEncryptString.h"
+#import "SLEncryptStringData.h"
+
 
 
 
@@ -23,9 +26,9 @@
     SLPerson *person = [[SLPerson alloc]init];
     [person sl_testCodeConfuse];
     [person sl_setupName:@"测试" sl_no:1 sl_age:2];
-//    NSString *str1 = mj_OCString(_313099685);
-//    const char *str2 = mj_CString(_313099685);
-//    NSLog(@"%@ %s", str1, str2);
+    NSString *str1 = sl_OCString(_313099685);
+    const char *str2 = sl_CString(_313099685);
+    NSLog(@"%@ %s", str1, str2);
 }
 
 
